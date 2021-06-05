@@ -9,8 +9,6 @@
 position = Vector2( 0.297302, 0 )
 texture = ExtResource( 1 )
 
-[node name="Sprite2" type="Sprite" parent="."]
-
-[node name="soline_7" type="Sprite" parent="Sprite2"]
+[node name="soline_7" type="Sprite" parent="."]
 position = Vector2( 542.005, 333.993 )
 texture = ExtResource( 2 )
