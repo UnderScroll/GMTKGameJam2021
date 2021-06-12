@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/jean-pierre.png-231f31378450b15f3eeb3157909c9c85.stex"
+path="res://.import/jean-pierre.png-4ae224334cae134b53e45600fdbe42dc.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://jean-pierre.png"
-dest_files=[ "res://.import/jean-pierre.png-231f31378450b15f3eeb3157909c9c85.stex" ]
+source_file="res://Ressources/Sprites/jean-pierre.png"
+dest_files=[ "res://.import/jean-pierre.png-4ae224334cae134b53e45600fdbe42dc.stex" ]
 
 [params]
 

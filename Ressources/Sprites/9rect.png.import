@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/GraphSprite.png-3f9e2c821d23adf447c129ad1ec5df82.stex"
+path="res://.import/9rect.png-bb061c08d348b8cda8a1515425bbe6f7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://GraphSprite.png"
-dest_files=[ "res://.import/GraphSprite.png-3f9e2c821d23adf447c129ad1ec5df82.stex" ]
+source_file="res://Ressources/Sprites/9rect.png"
+dest_files=[ "res://.import/9rect.png-bb061c08d348b8cda8a1515425bbe6f7.stex" ]
 
 [params]
 

@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Ressources/Sprites/9rect.png" type="Texture" id=1]
+[ext_resource path="res://Ressources/Sprites/jean-pierre.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/DialogueBoxHandler.gd" type="Script" id=3]
+[ext_resource path="res://Ressources/Fonts/Comfortaa-Bold.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 24
+font_data = ExtResource( 4 )
+
+[node name="Charater" type="Node2D"]
+
+[node name="Sprite" type="TextureRect" parent="."]
+margin_left = 32.1676
+margin_top = 257.168
+margin_right = 311.168
+margin_bottom = 583.168
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+margin_left = 18.0
+margin_top = 562.0
+margin_right = 800.0
+margin_bottom = 705.0
+texture = ExtResource( 1 )
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="RichTextLabel" parent="NinePatchRect"]
+margin_left = 14.0
+margin_top = 14.0
+margin_right = 759.0
+margin_bottom = 128.0
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+meta_underlined = false
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="NinePatchRect"]
+wait_time = 0.05
+autostart = true
+[connection signal="timeout" from="NinePatchRect/Timer" to="NinePatchRect/Label" method="_on_Timer_timeout"]

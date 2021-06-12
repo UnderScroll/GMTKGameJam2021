@@ -13,13 +13,13 @@ func _ready():
 	couleur=false
 	indice=0
 	connect("meta_clicked", self, "_click")
+
 	
 func _dialogue(dialog_texte) :
 	text=dialog_texte
 	longueur=0
 	couleur=false
 	indice=0
-
 
 
 func _process(delta):

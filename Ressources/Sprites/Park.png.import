@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Park.png-25e1cdbcf1e4c096eb240d932d42876c.stex"
+path="res://.import/Park.png-75e70619149b0ef2baca1bfff2561a7b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Park.png"
-dest_files=[ "res://.import/Park.png-25e1cdbcf1e4c096eb240d932d42876c.stex" ]
+source_file="res://Ressources/Sprites/Park.png"
+dest_files=[ "res://.import/Park.png-75e70619149b0ef2baca1bfff2561a7b.stex" ]
 
 [params]
 
