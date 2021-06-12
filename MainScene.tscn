@@ -1,15 +1,51 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Graph.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Personnage.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Character1.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Menu.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Character2.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Character3.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Map.tscn" type="PackedScene" id=7]
 
 [node name="MainScene" type="Node2D"]
 
-[node name="Graph" parent="." instance=ExtResource( 1 )]
-position = Vector2( 976.804, 474.032 )
+[node name="Menu" parent="." instance=ExtResource( 4 )]
 
-[node name="MarginContainer" parent="." instance=ExtResource( 2 )]
-margin_left = -239.941
-margin_top = 312.218
-margin_right = 776.059
-margin_bottom = 712.218
+[node name="Map" parent="." instance=ExtResource( 7 )]
+visible = false
+
+[node name="Character1" parent="." instance=ExtResource( 3 )]
+
+[node name="Graph" parent="Character1" instance=ExtResource( 1 )]
+position = Vector2( 976.804, 746.34 )
+
+[node name="MarginContainer" parent="Character1" instance=ExtResource( 2 )]
+margin_left = 26.468
+margin_top = 320.992
+margin_right = 1042.47
+margin_bottom = 720.992
+
+[node name="Character2" parent="." instance=ExtResource( 5 )]
+visible = false
+
+[node name="Graph" parent="Character2" instance=ExtResource( 1 )]
+position = Vector2( 974.176, 1601 )
+
+[node name="MarginContainer" parent="Character2" instance=ExtResource( 2 )]
+margin_left = -467.755
+margin_top = 978.25
+margin_right = 552.245
+margin_bottom = 1378.25
+
+[node name="Character3" parent="." instance=ExtResource( 6 )]
+visible = false
+
+[node name="Graph" parent="Character3" instance=ExtResource( 1 )]
+position = Vector2( 977.695, 1183.21 )
+
+[node name="MarginContainer" parent="Character3" instance=ExtResource( 2 )]
+margin_left = -492.0
+margin_top = 1414.0
+margin_right = 612.0
+margin_bottom = 1814.0
