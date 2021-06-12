@@ -26,8 +26,8 @@ margin_bottom = 560.0
 alignment = 1
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer"]
-margin_right = 250.0
-margin_bottom = 560.0
+margin_right = 260.0
+margin_bottom = 400.0
 size_flags_stretch_ratio = 0.5
 alignment = 2
 
@@ -81,5 +81,4 @@ __meta__ = {
 [node name="Timer" type="Timer" parent="HBoxContainer/VBoxContainer/NinePatchRect"]
 wait_time = 0.05
 autostart = true
-
 [connection signal="timeout" from="HBoxContainer/VBoxContainer/NinePatchRect/Timer" to="HBoxContainer/VBoxContainer/NinePatchRect/Label" method="_on_Timer_timeout"]
