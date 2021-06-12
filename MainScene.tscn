@@ -9,7 +9,7 @@
 position = Vector2( 976.804, 474.032 )
 
 [node name="MarginContainer" parent="." instance=ExtResource( 2 )]
-margin_left = -239.941
-margin_top = 312.218
-margin_right = 776.059
-margin_bottom = 712.218
+margin_left = 12.7422
+margin_top = 413.6
+margin_right = 818.742
+margin_bottom = 709.6
