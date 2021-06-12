@@ -36,3 +36,4 @@ func _on_Reset_Join_pressed():
 	for child in self.get_children():
 		if child.has_method("doesExist"):
 			child.queue_free()
+	joinCount = 0
