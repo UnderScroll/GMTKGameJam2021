@@ -54,7 +54,6 @@ func _ready():
 	numerotexte=0
 	_dialogue(listetexte[0])
 	connect("meta_clicked", self, "_click")
-	print(get_parent())
 	connect("word_clicked",get_parent().get_parent().get_parent().get_node("Graph"), "addFragment")
 
 	
