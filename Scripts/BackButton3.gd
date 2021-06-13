@@ -1,6 +1,6 @@
 extends Node
 
-var idnumber=0
+var idnumber=2
 
 func _on_BackButton_pressed():
 	self.visible = false
