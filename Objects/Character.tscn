@@ -55,6 +55,7 @@ script = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
 [connection signal="texte_fini" from="NinePatchRect/Label" to="NinePatchRect/Arrow" method="_on_Label_texte_fini"]
 [connection signal="texte_started" from="NinePatchRect/Label" to="NinePatchRect/Arrow" method="_on_Label_texte_started"]
 [connection signal="timeout" from="NinePatchRect/Timer" to="NinePatchRect/Label" method="_on_Timer_timeout"]
