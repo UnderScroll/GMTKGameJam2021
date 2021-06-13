@@ -1,7 +1,14 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scripts/Score.gd" type="Script" id=1]
 [ext_resource path="res://Ressources/Sounds/music.wav" type="AudioStream" id=2]
+=======
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Scripts/Score.gd" type="Script" id=1]
+[ext_resource path="res://Levels/Ending.tscn" type="PackedScene" id=2]
+>>>>>>> Stashed changes
 [ext_resource path="res://Levels/Character1.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Levels/Menu.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Levels/Character2.tscn" type="PackedScene" id=5]
@@ -41,6 +48,7 @@ script = ExtResource( 9 )
 [node name="Score" type="Node2D" parent="."]
 script = ExtResource( 1 )
 
+<<<<<<< Updated upstream
 [node name="SoundToggle" type="TextureButton" parent="."]
 margin_left = 1221.91
 margin_top = 14.9588
@@ -56,3 +64,7 @@ __meta__ = {
 }
 
 [connection signal="toggled" from="SoundToggle" to="AudioStreamPlayer2D" method="_on_TextureButton_toggled"]
+=======
+[node name="Ending" parent="." instance=ExtResource( 2 )]
+visible = false
+>>>>>>> Stashed changes

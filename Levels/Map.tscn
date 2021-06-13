@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Ressources/Sprites/Park.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Map.gd" type="Script" id=2]
+[ext_resource path="res://Ressources/Sprites/RetirementHome.png" type="Texture" id=3]
+[ext_resource path="res://Ressources/Sprites/House.png" type="Texture" id=4]
+[ext_resource path="res://Ressources/Sprites/MapBackgroundpng.png" type="Texture" id=5]
 
 [node name="Map" type="Node2D"]
 script = ExtResource( 2 )
@@ -10,16 +13,21 @@ script = ExtResource( 2 )
 margin_left = -1.5874
 margin_top = -1.68176
 margin_right = 1278.41
+<<<<<<< Updated upstream
 margin_bottom = 722.318
+=======
+margin_bottom = 724.0
+texture = ExtResource( 5 )
+>>>>>>> Stashed changes
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Character1" type="TextureButton" parent="."]
-margin_left = 201.0
-margin_top = 122.0
-margin_right = 462.0
-margin_bottom = 379.0
+margin_left = 157.822
+margin_top = 100.864
+margin_right = 418.822
+margin_bottom = 357.864
 texture_normal = ExtResource( 1 )
 expand = true
 stretch_mode = 5
@@ -28,19 +36,34 @@ __meta__ = {
 }
 
 [node name="Character2" type="TextureButton" parent="."]
-margin_left = 542.972
-margin_top = 425.811
-margin_right = 723.972
-margin_bottom = 610.811
+margin_left = 480.653
+margin_top = 383.742
+margin_right = 766.653
+margin_bottom = 648.742
+texture_normal = ExtResource( 4 )
+expand = true
+stretch_mode = 5
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Character3" type="TextureButton" parent="."]
-margin_left = 876.245
-margin_top = 109.531
-margin_right = 1095.25
-margin_bottom = 322.531
+margin_left = 860.921
+margin_top = 101.618
+margin_right = 1116.92
+margin_bottom = 352.618
+texture_normal = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Remember" type="Button" parent="."]
+margin_left = 1129.0
+margin_top = 17.0
+margin_right = 1257.0
+margin_bottom = 61.0
+text = "Remember"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -48,3 +71,4 @@ __meta__ = {
 [connection signal="pressed" from="Character1" to="." method="_on_Character1_pressed"]
 [connection signal="pressed" from="Character2" to="." method="_on_Character2_pressed"]
 [connection signal="pressed" from="Character3" to="." method="_on_Character3_pressed"]
+[connection signal="pressed" from="Remember" to="." method="_on_Remember_pressed"]
