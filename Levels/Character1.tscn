@@ -9,17 +9,6 @@
 [node name="Character1" type="Node2D"]
 script = ExtResource( 3 )
 
-[node name="BackgroundImage" type="TextureRect" parent="."]
-show_behind_parent = true
-margin_right = 1280.0
-margin_bottom = 720.0
-texture = ExtResource( 4 )
-expand = true
-stretch_mode = 7
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 140.519, 505.211 )
 scale = Vector2( 3, 3 )
@@ -40,4 +29,15 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="BackgroundImage" type="TextureRect" parent="."]
+show_behind_parent = true
+margin_right = 1278.0
+margin_bottom = 720.0
+mouse_filter = 2
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 7
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]

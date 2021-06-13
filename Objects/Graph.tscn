@@ -8,6 +8,7 @@
 extents = Vector2( 144.701, 113.267 )
 
 [node name="Graph" type="Node2D"]
+position = Vector2( 174.864, 150.837 )
 z_index = 10
 script = ExtResource( 2 )
 
