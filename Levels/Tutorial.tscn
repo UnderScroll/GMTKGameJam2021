@@ -1,13 +1,12 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/Tutorial.gd" type="Script" id=1]
-[ext_resource path="res://Ressources/Fonts/DancingScript-Regular.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://tutoriel.png" type="Texture" id=3]
 [ext_resource path="res://Ressources/Fonts/Comfortaa-Bold.ttf" type="DynamicFontData" id=4]
 
 [sub_resource type="DynamicFont" id=1]
-size = 69
-font_data = ExtResource( 2 )
+size = 50
+font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 30
@@ -27,15 +26,17 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="."]
-margin_top = 2.0
-margin_right = 1277.0
-margin_bottom = 716.0
+margin_left = 40.0
+margin_top = 40.0
+margin_right = 1233.0
+margin_bottom = 673.0
 custom_fonts/font = SubResource( 1 )
-text = "
-Her name was forgotten...
+text = "Her name was forgotten...
 Left click to collect the highlighted words, and right click to link them in order to reveal more of her story.
-There are clues throughout the stories to help you make the correct links"
+There are clues throughout the stories to help you make the correct links.
+When you are done with the links click on REMEMBER to conclude"
 align = 1
+valign = 1
 autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/remember.png-6893d6627438109d2937e02ed6e7f3e3.stex"
+path="res://.import/remember-1.png.png-eb7dd204c088534bf28fe46a0bcb767f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://remember.png"
-dest_files=[ "res://.import/remember.png-6893d6627438109d2937e02ed6e7f3e3.stex" ]
+source_file="res://remember-1.png.png"
+dest_files=[ "res://.import/remember-1.png.png-eb7dd204c088534bf28fe46a0bcb767f.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

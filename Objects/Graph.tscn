@@ -37,16 +37,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Debug" type="Button" parent="."]
-margin_left = 165.605
-margin_top = -393.416
-margin_right = 248.605
-margin_bottom = -373.416
-text = "Add Node"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="Reset Join" type="Button" parent="."]
 margin_left = 250.0
 margin_top = -48.0
@@ -69,5 +59,4 @@ valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="pressed" from="Debug" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Reset Join" to="." method="_on_Reset_Join_pressed"]

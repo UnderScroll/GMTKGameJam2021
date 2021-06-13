@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scripts/Map.gd" type="Script" id=1]
 [ext_resource path="res://Ressources/Sprites/MapBackgroundpng.png" type="Texture" id=2]
 [ext_resource path="res://Ressources/Sprites/House.png" type="Texture" id=3]
 [ext_resource path="res://Ressources/Sprites/Park.png" type="Texture" id=4]
 [ext_resource path="res://Ressources/Sprites/RetirementHome.png" type="Texture" id=5]
+[ext_resource path="res://remember-1.png.png" type="Texture" id=6]
 
 [node name="Map" type="Node2D"]
 script = ExtResource( 1 )
@@ -31,10 +32,10 @@ __meta__ = {
 }
 
 [node name="Character2" type="TextureButton" parent="."]
-margin_left = 507.541
-margin_top = 378.531
-margin_right = 571.541
-margin_bottom = 442.531
+margin_left = 495.527
+margin_top = 379.866
+margin_right = 559.527
+margin_bottom = 443.866
 rect_scale = Vector2( 3, 3 )
 texture_normal = ExtResource( 3 )
 stretch_mode = 5
@@ -43,10 +44,10 @@ __meta__ = {
 }
 
 [node name="Character3" type="TextureButton" parent="."]
-margin_left = 802.427
-margin_top = 136.854
-margin_right = 866.427
-margin_bottom = 200.854
+margin_left = 790.413
+margin_top = 146.198
+margin_right = 854.413
+margin_bottom = 210.198
 rect_scale = Vector2( 3, 3 )
 texture_normal = ExtResource( 5 )
 stretch_mode = 5
@@ -54,12 +55,13 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Remember" type="Button" parent="."]
-margin_left = 1134.05
-margin_top = 56.7754
-margin_right = 1217.05
-margin_bottom = 89.7754
-text = "Remember"
+[node name="Remember" type="TextureButton" parent="."]
+margin_left = 1022.65
+margin_top = 51.3303
+margin_right = 1222.65
+margin_bottom = 181.33
+texture_normal = ExtResource( 6 )
+expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }

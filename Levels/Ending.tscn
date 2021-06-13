@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scripts/Ending.gd" type="Script" id=1]
 [ext_resource path="res://Ressources/Fonts/DancingScript-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://ecran_de_fin.png" type="Texture" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 30
@@ -10,46 +11,67 @@ font_data = ExtResource( 2 )
 [node name="Ending" type="Node2D"]
 script = ExtResource( 1 )
 
+[node name="ecran_de_fin" type="TextureRect" parent="."]
+show_behind_parent = true
+margin_right = 1280.0
+margin_bottom = 720.0
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Conclusion" type="Label" parent="."]
-margin_left = 328.0
-margin_top = 45.0
-margin_right = 823.0
-margin_bottom = 639.0
+margin_left = 221.0
+margin_top = 101.0
+margin_right = 1099.0
+margin_bottom = 632.0
 custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "I’m not sure what my name is, but I still want to thank you anyway. I don’t recall much at all, but I know my life was a good one. I believe I had a beautiful family, caring friends…
 I don’t think I could ask for more. See you soon.
 Anne
 "
+align = 1
+valign = 1
 autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Conclusion2" type="Label" parent="."]
-margin_left = 328.0
-margin_top = 45.0
-margin_right = 823.0
-margin_bottom = 639.0
+margin_left = 222.0
+margin_top = 97.0
+margin_right = 1095.0
+margin_bottom = 635.0
 custom_fonts/font = SubResource( 1 )
-text = "I’m not sure what my name is, but I still want to thank you anyway. I don’t recall much at all, but I know my life was a good one. I believe I had a beautiful family, caring friends…
-I don’t think I could ask for more. See you soon.
-Anne
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Thank you. You did your best to find my name. I remember Charles, Sophie, and Alice…
+I couldn’t be happier. It’s ok if I don’t know who I am, as long as I know that people care about me and that I love them too. Thanks again.
+Jeanne
 "
+align = 1
+valign = 1
 autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Conclusion3" type="Label" parent="."]
-margin_left = 328.0
-margin_top = 45.0
-margin_right = 823.0
-margin_bottom = 639.0
+margin_left = 235.0
+margin_top = 108.0
+margin_right = 1080.0
+margin_bottom = 624.0
 custom_fonts/font = SubResource( 1 )
-text = "I’m not sure what my name is, but I still want to thank you anyway. I don’t recall much at all, but I know my life was a good one. I believe I had a beautiful family, caring friends…
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "I can’t thank you enough. I remember everything now. I was raised by a caring family, and spent my childhood with Sophie until I had to go to boarding school. When I came back, Sophie wasn’t there anymore. I met Charles in the same park where I used to play. We married not too long after, and we had beautiful children and a granddaughter named Alice. She really liked to come to my place. She wanted to do everything like me, sewing, cooking, so I teached her. I had a wonderful life, maybe a perfect one. I have no regrets. Thanks again.
+Jeannine
 I don’t think I could ask for more. See you soon.
 Anne
 "
+align = 1
+valign = 1
 autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -64,5 +86,4 @@ text = "restart"
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
 [connection signal="pressed" from="Restart" to="." method="_on_Restart_pressed"]
