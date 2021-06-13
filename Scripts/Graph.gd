@@ -33,12 +33,23 @@ func setJoin(var fragment):
 			join.node0 = fragment
 			join.hide()
 			add_child(join)
-			joinCount += 1
 		else:
-			creating_join = !creating_join
-			current_join.get_node("Line2D").set_point_position(1,fragment.position)
-			current_join.node1 = fragment
-			current_join.show()
+			if (fragment != current_join.node0):
+				current_join.node1 = fragment
+				for child in self.get_children():
+					if child.has_method("doesExist"): 
+						if !(current_join.node0 == child.node1 and current_join.node1 == child.node1) or (current_join.node0 == child.node1 and current_join.node1 == child.node0):
+							creating_join = !creating_join
+							current_join.get_node("Line2D").set_point_position(1,fragment.position)
+							current_join.show()
+							joinCount += 1
+						else:
+							print("Already exists")
+							current_join.queue_free()
+			else:
+				print("Self Join")
+				current_join.queue_free()
+				
 
 func _on_Reset_Join_pressed():
 	var joinsList = get_node("/root/MainScene/Score").joins_done
