@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scripts/Tutorial.gd" type="Script" id=1]
+[ext_resource path="res://Ressources/Fonts/DancingScript-Regular.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 69
+font_data = ExtResource( 2 )
 
 [node name="Tutorial" type="Node2D"]
 script = ExtResource( 1 )
@@ -14,4 +19,19 @@ text = "Skip"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Label" type="Label" parent="."]
+margin_left = 221.863
+margin_top = 166.455
+margin_right = 1118.86
+margin_bottom = 548.455
+custom_fonts/font = SubResource( 1 )
+text = "Her name was forgotten...
+Left click to collect the highlighted words, and right click to link them in order to reveal more of her story."
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [connection signal="pressed" from="SkipButton" to="." method="_on_SkipButton_pressed"]
