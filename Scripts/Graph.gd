@@ -7,8 +7,6 @@ var graphScore = 0
 
 func _ready():
 	graphScore = 0
-	addFragment(0)
-	addFragment(1)
 
 func _on_Button_pressed():
 	var scene = load("res://Objects/Fragment.tscn")

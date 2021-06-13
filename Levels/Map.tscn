@@ -1,0 +1,69 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scripts/Map.gd" type="Script" id=1]
+[ext_resource path="res://Ressources/Sprites/MapBackgroundpng.png" type="Texture" id=2]
+[ext_resource path="res://Ressources/Sprites/House.png" type="Texture" id=3]
+[ext_resource path="res://Ressources/Sprites/Park.png" type="Texture" id=4]
+[ext_resource path="res://Ressources/Sprites/RetirementHome.png" type="Texture" id=5]
+
+[node name="Map" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="MapBackground" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Character1" type="TextureButton" parent="."]
+margin_left = 243.522
+margin_top = 135.919
+margin_right = 307.522
+margin_bottom = 199.919
+rect_scale = Vector2( 3, 3 )
+texture_normal = ExtResource( 4 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Character2" type="TextureButton" parent="."]
+margin_left = 507.541
+margin_top = 378.531
+margin_right = 571.541
+margin_bottom = 442.531
+rect_scale = Vector2( 3, 3 )
+texture_normal = ExtResource( 3 )
+stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Character3" type="TextureButton" parent="."]
+margin_left = 802.427
+margin_top = 136.854
+margin_right = 866.427
+margin_bottom = 200.854
+rect_scale = Vector2( 3, 3 )
+texture_normal = ExtResource( 5 )
+stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Remember" type="Button" parent="."]
+margin_left = 1134.05
+margin_top = 56.7754
+margin_right = 1217.05
+margin_bottom = 89.7754
+text = "Remember"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Character1" to="." method="_on_Character1_pressed"]
+[connection signal="pressed" from="Character2" to="." method="_on_Character2_pressed"]
+[connection signal="pressed" from="Character3" to="." method="_on_Character3_pressed"]
+[connection signal="pressed" from="Remember" to="." method="_on_Remember_pressed"]
