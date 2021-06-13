@@ -1,6 +1,7 @@
 extends KinematicBody2D
 
 var dragging = false
+var id
 
 signal dragsignal
 signal clicksignal
@@ -13,7 +14,7 @@ func _ready():
 	self.position.y = rand_range(20,220)
 	
 
-func _process(delta):
+func _process(_delta):
 	if dragging:
 		var mousePos = get_viewport().get_mouse_position()
 		set_global_position(mousePos)
@@ -25,7 +26,7 @@ func _on_dragsignal():
 	print(self.position)
 	dragging=!dragging
 
-func _on_Fragment_input_event(viewport, event, shape_idx):
+func _on_Fragment_input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton:
 		if event.button_index == BUTTON_LEFT and event.pressed:
 			emit_signal("dragsignal")

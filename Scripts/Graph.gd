@@ -3,15 +3,25 @@ extends Node2D
 var joinCount = 0
 var creating_join = false
 var current_join
-signal deleteJoin
+var graphScore = 0
 
 func _ready():
-	pass
+	graphScore = 0
+	addFragment(0)
+	addFragment(1)
 
 func _on_Button_pressed():
 	var scene = load("res://Objects/Fragment.tscn")
 	var fragment = scene.instance()
 	add_child(fragment)
+
+func addFragment(var id):
+	var scene = load("res://Objects/Fragment.tscn")
+	var fragment = scene.instance()
+	add_child(fragment)
+	fragment.get_node("KinematicBody2D").id = id
+	var labelNode = fragment.get_node("KinematicBody2D").get_node("Label")
+	labelNode.text = get_node("/root/MainScene/Score").fragments[id]
 
 func setJoin(var fragment):
 	if joinCount < 5:
@@ -39,3 +49,12 @@ func _on_Reset_Join_pressed():
 	joinCount = 0
 	current_join = null
 	creating_join = false
+	graphScore = 0
+
+func updateScore():
+	graphScore = 0
+	print("graphScore")
+	for child in self.get_children():
+		if child.has_method("doesExist"):
+			graphScore += child.score
+	print(graphScore)

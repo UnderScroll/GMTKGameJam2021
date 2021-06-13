@@ -29,6 +29,7 @@ func _ready():
 	numerotexte=0
 	_dialogue(listetexte[0])
 	connect("meta_clicked", self, "_click")
+	#connect("word_clicked",get_parent(), )
 
 	
 func _dialogue(dialog_texte) :
@@ -40,7 +41,7 @@ func _dialogue(dialog_texte) :
 	istextefini=false
 
 
-func _process(delta):
+func _process(_delta):
 	if texte[longueur]=="[" and texte[longueur+1]=="u" :
 		indice=longueur
 		couleur=true
@@ -67,7 +68,6 @@ func _on_Timer_timeout():
 
 func _click(mot) :
 	emit_signal("word_clicked",mot)
-	pass
 
 
 func _on_Arrow_gui_input(event):
