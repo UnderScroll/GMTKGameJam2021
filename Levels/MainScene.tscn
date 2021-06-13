@@ -57,5 +57,4 @@ stretch_mode = 5
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
 [connection signal="toggled" from="SoundToggle" to="AudioStreamPlayer2D" method="_on_SoundToggle_toggled"]

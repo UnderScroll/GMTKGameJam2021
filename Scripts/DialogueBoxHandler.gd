@@ -13,7 +13,7 @@ var listetexte1 = [
 "To break the tension, I asked her if she wanted to go to the [url=05][color=red]park[/color][/url] with me.",
 "When she said yes, the room brightened up. I took her hand and we went to the park."
 ]
-var listetexte2=[
+var listetexte3=[
 "Even though we were very close, [url=01][color=red]she[/color][/url] would sometimes stay in her room, completely alone.",
 "One day, she came to me after an entire week, and casually asked what was for [url=06][color=red]dinner[/color][/url].",
 "She didn’t acknowledge anything else.",
@@ -25,7 +25,7 @@ var listetexte2=[
 "I walked to her and hugged her.",
 "\"I’m your husband, [url=08][color=red]Charles[/color][/url]. We’re in our [url=09][color=red]retirement home[/color][/url].\""
 ]
-var listetexte3=[
+var listetexte2=[
 "\"[url=01][color=red]Grandma[/color][/url] ! I knew you would eventually get better.\"",
 "\"Welcome home ! Your [url=10][color=red]true home[/color][/url] !\"",
 "That’s what I will say when she comes back here.",
