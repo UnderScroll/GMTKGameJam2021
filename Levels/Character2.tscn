@@ -9,17 +9,6 @@
 [node name="Character2" type="Node2D"]
 script = ExtResource( 3 )
 
-[node name="TextureRect" type="TextureRect" parent="."]
-show_behind_parent = true
-margin_right = 1280.0
-margin_bottom = 720.0
-texture = ExtResource( 4 )
-expand = true
-stretch_mode = 7
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="alice" type="Sprite" parent="."]
 position = Vector2( 155.854, 500.782 )
 scale = Vector2( 3, 3 )
@@ -35,6 +24,18 @@ margin_left = 16.0
 margin_top = 22.0
 margin_right = 49.0
 margin_bottom = 54.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+show_behind_parent = true
+margin_right = 1280.0
+margin_bottom = 720.0
+mouse_filter = 2
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 7
 __meta__ = {
 "_edit_use_anchors_": false
 }
