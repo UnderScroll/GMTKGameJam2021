@@ -1,11 +1,17 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Objects/Graph.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Objects/Character.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scripts/BackButton.gd" type="Script" id=3]
+[ext_resource path="res://Ressources/Sprites/alice.png" type="Texture" id=4]
 
 [node name="Character2" type="Node2D"]
 script = ExtResource( 3 )
+
+[node name="alice" type="Sprite" parent="."]
+position = Vector2( 133.415, 502.588 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
 
 [node name="Character" parent="." instance=ExtResource( 2 )]
 
