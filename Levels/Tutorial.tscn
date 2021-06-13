@@ -33,5 +33,4 @@ autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
 [connection signal="pressed" from="SkipButton" to="." method="_on_SkipButton_pressed"]

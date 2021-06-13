@@ -18,8 +18,10 @@ func _process(delta):
 		var ScoreNode = get_node("/root/MainScene/Score")
 		if (ScoreNode.joins.has([node0.id,node1.id])):
 			score = ScoreNode.joins.get([node0.id,node1.id])
+			get_node("/root/MainScene/Score").joins_done.append([node0.id,node1.id])
 		elif (ScoreNode.joins.has([node1.id,node0.id])):
 			score = ScoreNode.joins.get([node1.id,node0.id])
+			get_node("/root/MainScene/Score").joins_done.append([node1.id,node0.id])
 		else:
 			score = 0
 		get_parent().updateScore()

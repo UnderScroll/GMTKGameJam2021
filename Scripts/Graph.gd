@@ -41,8 +41,12 @@ func setJoin(var fragment):
 			current_join.show()
 
 func _on_Reset_Join_pressed():
+	var joinsList = get_node("/root/MainScene/Score").joins_done
 	for child in self.get_children():
 		if child.has_method("doesExist"):
+			var joinIndex = joinsList.find([child.node0.id,child.node1.id])
+			if (joinIndex != -1):
+				joinsList.remove(joinIndex)
 			child.queue_free()
 	joinCount = 0
 	current_join = null

@@ -1,8 +1,10 @@
 extends Node2D
 
-# Called when the node enters the scene tree for the first time.
+signal processEnding
+
+
 func _ready():
-	pass # Replace with function body.
+	connect("processEnding", get_node("/root/MainScene/Ending"), "processEnd")
 
 
 func _on_Character1_pressed():
@@ -37,3 +39,4 @@ func _on_Remember_pressed():
 	self.visible = false
 	var endscreen = get_node("/root/MainScene/Ending")
 	endscreen.visible = true
+	emit_signal("processEnding")

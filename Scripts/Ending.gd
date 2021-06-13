@@ -4,7 +4,6 @@ func _ready():
 	pass # Replace with function body.
 	
 
-
 func _on_Restart_pressed():
 	self.visible = false
 	get_node("/root/MainScene/Menu").visible = true
@@ -14,3 +13,6 @@ func _on_Restart_pressed():
 	graph1._hard_reset()
 	graph2._hard_reset()
 	graph3._hard_reset()
+
+func processEnd():
+	print(get_parent().get_node("Score").joins_done)

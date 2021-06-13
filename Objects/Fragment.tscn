@@ -1,12 +1,17 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scripts/Fragment.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/ToDelete.gd" type="Script" id=2]
 [ext_resource path="res://Ressources/Sprites/9Part3Alpha.png" type="Texture" id=3]
+[ext_resource path="res://Ressources/Fonts/Comfortaa-Bold.ttf" type="DynamicFontData" id=4]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 24.335
 height = 47.4653
+
+[sub_resource type="DynamicFont" id=2]
+size = 13
+font_data = ExtResource( 4 )
 
 [node name="Fragment" type="Node2D"]
 z_index = 20
@@ -38,15 +43,13 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="KinematicBody2D/NinePatchRect"]
-modulate = Color( 1, 0, 0, 1 )
-self_modulate = Color( 1, 0, 0, 1 )
-margin_left = 21.4023
-margin_top = 15.0178
-margin_right = 65.4023
-margin_bottom = 33.0178
+margin_left = 1.0
+margin_right = 87.0
+margin_bottom = 48.0
 grow_horizontal = 2
 grow_vertical = 2
 rect_pivot_offset = Vector2( 21, 20 )
+custom_fonts/font = SubResource( 2 )
 text = "Bob"
 align = 1
 valign = 1
