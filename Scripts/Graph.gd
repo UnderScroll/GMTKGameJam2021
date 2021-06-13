@@ -18,7 +18,7 @@ func addFragment(var id):
 	var fragment = scene.instance()
 	add_child(fragment)
 	fragment.get_node("KinematicBody2D").id = id
-	var labelNode = fragment.get_node("KinematicBody2D").get_node("Label")
+	var labelNode = fragment.get_node("KinematicBody2D/NinePatchRect").get_node("Label")
 	labelNode.text = get_node("/root/MainScene/Score").fragments[id]
 
 func setJoin(var fragment):

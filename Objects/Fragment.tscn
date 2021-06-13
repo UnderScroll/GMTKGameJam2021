@@ -5,6 +5,8 @@
 [ext_resource path="res://Ressources/Sprites/9Part3Alpha.png" type="Texture" id=3]
 
 [sub_resource type="CapsuleShape2D" id=1]
+radius = 24.335
+height = 47.4653
 
 [node name="Fragment" type="Node2D"]
 z_index = 20
@@ -15,31 +17,13 @@ z_index = 20
 input_pickable = true
 script = ExtResource( 1 )
 
-[node name="Label" type="Label" parent="KinematicBody2D"]
-modulate = Color( 1, 0, 0, 1 )
-self_modulate = Color( 1, 0, 0, 1 )
-margin_left = -22.0
-margin_top = -9.0
-margin_right = 22.0
-margin_bottom = 9.0
-grow_horizontal = 2
-grow_vertical = 2
-rect_pivot_offset = Vector2( 21, 20 )
-text = "Bob"
-align = 1
-valign = 1
-autowrap = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
-position = Vector2( -0.5625, -1 )
+position = Vector2( -0.0321655, -0.116116 )
 rotation = 1.5708
 z_index = 30
 shape = SubResource( 1 )
 
-[node name="NinePatchRect" type="NinePatchRect" parent="."]
+[node name="NinePatchRect" type="NinePatchRect" parent="KinematicBody2D"]
 margin_left = -43.4023
 margin_top = -24.0178
 margin_right = 43.5977
@@ -49,6 +33,24 @@ patch_margin_left = 24
 patch_margin_top = 24
 patch_margin_right = 24
 patch_margin_bottom = 24
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="KinematicBody2D/NinePatchRect"]
+modulate = Color( 1, 0, 0, 1 )
+self_modulate = Color( 1, 0, 0, 1 )
+margin_left = 21.4023
+margin_top = 15.0178
+margin_right = 65.4023
+margin_bottom = 33.0178
+grow_horizontal = 2
+grow_vertical = 2
+rect_pivot_offset = Vector2( 21, 20 )
+text = "Bob"
+align = 1
+valign = 1
+autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
