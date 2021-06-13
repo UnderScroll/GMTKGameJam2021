@@ -45,6 +45,7 @@ var indice
 var numerotexte
 signal word_clicked
 signal texte_fini
+signal dialogue_fini
 signal texte_started
 var istextefini
 
@@ -80,6 +81,8 @@ func _process(_delta):
 	if not couleur :
 		truetexte=texte.substr(0,longueur+1)
 	set_bbcode(truetexte)
+	if numerotexte==listetexte.size()-1 :
+		emit_signal("dialogue_fini")
 
 
 func _on_Timer_timeout():
@@ -102,3 +105,4 @@ func _on_Arrow_gui_input(event):
 			if listetexte.size()>numerotexte+1 :
 				numerotexte+=1
 				_dialogue(listetexte[numerotexte])
+				
