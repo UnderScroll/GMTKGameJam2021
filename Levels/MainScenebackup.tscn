@@ -1,0 +1,71 @@
+<<<<<<< Updated upstream
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Scripts/Score.gd" type="Script" id=1]
+[ext_resource path="res://Ressources/Sounds/music.wav" type="AudioStream" id=2]
+=======
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Scripts/Score.gd" type="Script" id=1]
+[ext_resource path="res://Levels/Ending.tscn" type="PackedScene" id=2]
+>>>>>>> Stashed changes
+[ext_resource path="res://Levels/Character1.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Levels/Menu.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Levels/Character2.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Levels/Character3.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Levels/Map.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Levels/Tutorial.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scripts/AudioStreamPlayer2D.gd" type="Script" id=9]
+[ext_resource path="res://Ressources/Sprites/soundon.png" type="Texture" id=10]
+[ext_resource path="res://Ressources/Sprites/soundoff.png" type="Texture" id=11]
+
+[node name="MainScene" type="Node2D"]
+
+[node name="Menu" parent="." instance=ExtResource( 4 )]
+position = Vector2( 30.2722, -8.409 )
+
+[node name="Tutorial" parent="." instance=ExtResource( 8 )]
+visible = false
+
+[node name="Map" parent="." instance=ExtResource( 7 )]
+visible = false
+
+[node name="Character1" parent="." instance=ExtResource( 3 )]
+visible = false
+
+[node name="Character2" parent="." instance=ExtResource( 5 )]
+visible = false
+
+[node name="Character3" parent="." instance=ExtResource( 6 )]
+visible = false
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 622.408, 371.271 )
+stream = ExtResource( 2 )
+volume_db = -20.0
+autoplay = true
+script = ExtResource( 9 )
+
+[node name="Score" type="Node2D" parent="."]
+script = ExtResource( 1 )
+
+<<<<<<< Updated upstream
+[node name="SoundToggle" type="TextureButton" parent="."]
+margin_left = 1221.91
+margin_top = 14.9588
+margin_right = 1261.91
+margin_bottom = 60.9588
+toggle_mode = true
+texture_normal = ExtResource( 10 )
+texture_pressed = ExtResource( 11 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="toggled" from="SoundToggle" to="AudioStreamPlayer2D" method="_on_TextureButton_toggled"]
+=======
+[node name="Ending" parent="." instance=ExtResource( 2 )]
+visible = false
+>>>>>>> Stashed changes
