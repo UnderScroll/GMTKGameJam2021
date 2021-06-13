@@ -29,7 +29,8 @@ func _ready():
 	numerotexte=0
 	_dialogue(listetexte[0])
 	connect("meta_clicked", self, "_click")
-	#connect("word_clicked",get_parent(), )
+	print(get_parent())
+	connect("word_clicked",get_parent().get_parent().get_parent().get_node("Graph"), "addFragment")
 
 	
 func _dialogue(dialog_texte) :
@@ -67,7 +68,8 @@ func _on_Timer_timeout():
 			istextefini=true
 
 func _click(mot) :
-	emit_signal("word_clicked",mot)
+	var id = int(mot)
+	emit_signal("word_clicked",id)
 
 
 func _on_Arrow_gui_input(event):

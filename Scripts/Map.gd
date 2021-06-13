@@ -25,3 +25,9 @@ func _on_Character3_pressed():
 	self.visible = false
 	var character3 = get_node("/root/MainScene/Character3")
 	character3.visible = true
+
+
+func _on_Remember_pressed():
+	self.visible = false
+	var endscreen = get_node("/root/MainScene/Ending")
+	endscreen.visible = true

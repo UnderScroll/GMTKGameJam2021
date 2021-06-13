@@ -16,6 +16,8 @@ var joins = {
 	[1,3] : -1
 }
 
+var joins_done
+
 func _ready():
 	score = 0
 
@@ -30,3 +32,7 @@ func updateScore():
 	score += char1.get_node("Graph").graphScore
 	score += char2.get_node("Graph").graphScore
 	score += char3.get_node("Graph").graphScore
+	for child in char1.get_children():
+		if child.has_method("doesExist"):
+			if child.node0 != null and child.node1:
+					joins_done.append([child.node0,child.node1])

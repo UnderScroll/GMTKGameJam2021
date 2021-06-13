@@ -58,3 +58,15 @@ func updateScore():
 		if child.has_method("doesExist"):
 			graphScore += child.score
 	print(graphScore)
+
+func _hard_reset():
+	for child in self.get_children():
+		if child.has_method("doesExist"):
+			child.queue_free()
+		if child.has_method("degage"):
+			print("Bobesquifique")
+			child.queue_free()
+	joinCount = 0
+	current_join = null
+	creating_join = false
+	graphScore = 0
