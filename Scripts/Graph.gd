@@ -28,7 +28,6 @@ func addFragment(var id):
 func setJoin(var fragment):
 	if joinCount < 5:
 		if (!creating_join):
-			print("join one")
 			var scene = load("res://Objects/Join.tscn")
 			var join = scene.instance()
 			current_join = join
@@ -41,12 +40,9 @@ func setJoin(var fragment):
 			creating_join = false
 			var alreadyExists = false
 			if (fragment != current_join.node0):
-				print("Current Join : ",current_join.node0,current_join.node1)
 				for child in self.get_children():
 					if child.has_method("doesExist"): 
-						print("Child : ",child.node0,child.node1)
 						if ((child.node0 == current_join.node0 and child.node1 == fragment) or (child.node1 == current_join.node0 and child.node0 == fragment)) and child.node1 != null:
-							print("Already exists")
 							current_join.queue_free()
 							alreadyExists = true
 							joinCount -= 1
@@ -55,7 +51,6 @@ func setJoin(var fragment):
 				current_join.node1 = fragment
 				current_join.show()
 			else:
-				print("Self Join")
 				current_join.queue_free()
 	$JoinLeft.text = String(4-joinCount)
 				
@@ -76,18 +71,15 @@ func _on_Reset_Join_pressed():
 
 func updateScore():
 	graphScore = 0
-	print("graphScore")
 	for child in self.get_children():
 		if child.has_method("doesExist"):
 			graphScore += child.score
-	print(graphScore)
 
 func _hard_reset():
 	for child in self.get_children():
 		if child.has_method("doesExist"):
 			child.queue_free()
 		if child.has_method("degage"):
-			print("Bobesquifique")
 			child.queue_free()
 	joinCount = 0
 	current_join = null
@@ -98,8 +90,6 @@ func checkCollision(var frag, var pos):
 	for child in self.get_children():
 		if child.has_method("degage") and child.get_node("KinematicBody2D").position != frag.position:
 			var frag2 = child.get_node("KinematicBody2D")
-			print(frag.position,frag2.position)
 			if abs(frag.position.x - frag2.position.x) < 82 and abs(frag.position.y - frag2.position.y) < 45:
-				print("trop pres")
 				frag.position = pos
 				break

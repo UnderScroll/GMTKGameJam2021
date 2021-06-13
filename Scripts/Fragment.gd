@@ -26,7 +26,6 @@ func _process(_delta):
 		self.position.y = clamp(self.position.y,collider.radius,240-collider.radius)
 
 func _on_dragsignal():
-	print(self.position)
 	dragging=!dragging
 	if dragging:
 		prevPos = self.position
