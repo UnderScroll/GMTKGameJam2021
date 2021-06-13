@@ -20,6 +20,10 @@ func addFragment(var id):
 	fragment.get_node("KinematicBody2D").id = id
 	var labelNode = fragment.get_node("KinematicBody2D/NinePatchRect").get_node("Label")
 	labelNode.text = get_node("/root/MainScene/Score").fragments[id]
+	for child in self.get_children():
+		if child.has_method("degage") and child != fragment:
+			if id == child.get_node("KinematicBody2D").id:
+				fragment.queue_free()
 
 func setJoin(var fragment):
 	if joinCount < 5:
@@ -28,27 +32,32 @@ func setJoin(var fragment):
 			var scene = load("res://Objects/Join.tscn")
 			var join = scene.instance()
 			current_join = join
-			creating_join = !creating_join
+			creating_join = true
 			join.get_node("Line2D").set_point_position(0,fragment.position)
 			join.node0 = fragment
 			join.hide()
 			add_child(join)
 		else:
+			creating_join = false
+			var alreadyExists = false
 			if (fragment != current_join.node0):
-				current_join.node1 = fragment
+				print("Current Join : ",current_join.node0,current_join.node1)
 				for child in self.get_children():
 					if child.has_method("doesExist"): 
-						if !(current_join.node0 == child.node1 and current_join.node1 == child.node1) or (current_join.node0 == child.node1 and current_join.node1 == child.node0):
-							creating_join = !creating_join
-							current_join.get_node("Line2D").set_point_position(1,fragment.position)
-							current_join.show()
-							joinCount += 1
-						else:
+						print("Child : ",child.node0,child.node1)
+						if ((child.node0 == current_join.node0 and child.node1 == fragment) or (child.node1 == current_join.node0 and child.node0 == fragment)) and child.node1 != null:
 							print("Already exists")
 							current_join.queue_free()
+							alreadyExists = true
+							joinCount -= 1
+							break
+				joinCount += 1
+				current_join.node1 = fragment
+				current_join.show()
 			else:
 				print("Self Join")
 				current_join.queue_free()
+	$JoinLeft.text = String(4-joinCount)
 				
 
 func _on_Reset_Join_pressed():
@@ -60,6 +69,7 @@ func _on_Reset_Join_pressed():
 				joinsList.remove(joinIndex)
 			child.queue_free()
 	joinCount = 0
+	$JoinLeft.text = String(4-joinCount)
 	current_join = null
 	creating_join = false
 	graphScore = 0
@@ -83,3 +93,13 @@ func _hard_reset():
 	current_join = null
 	creating_join = false
 	graphScore = 0
+
+func checkCollision(var frag, var pos):
+	for child in self.get_children():
+		if child.has_method("degage") and child.get_node("KinematicBody2D").position != frag.position:
+			var frag2 = child.get_node("KinematicBody2D")
+			print(frag.position,frag2.position)
+			if abs(frag.position.x - frag2.position.x) < 82 and abs(frag.position.y - frag2.position.y) < 45:
+				print("trop pres")
+				frag.position = pos
+				break
